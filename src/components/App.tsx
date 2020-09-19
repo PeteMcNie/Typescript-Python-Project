@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from "react"
 
 export interface HelloWorldProps {
-  userName: string;
-  lang: string;
+  userName: string
+  lang: string
 }
 
 const App = (props: HelloWorldProps) => (
