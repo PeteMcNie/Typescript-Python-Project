@@ -1,7 +1,7 @@
 {
-  "name": "salhouse-goldens",
+  "name": "teams",
   "version": "1.0.0",
-  "description": "Salhouse Goldens",
+  "description": "Typescript/Python Project",
   "main": "index.js",
   "author": "P R McNie",
   "license": "ISC",
