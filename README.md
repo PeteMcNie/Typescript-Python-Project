@@ -1,3 +1,3 @@
-# React-Redux-Thunk-Boilerplate
+# Typescript-React-Python Project
 
-A bolier plate to get started on react projects quicker
+A work in progress...more to come soon!
