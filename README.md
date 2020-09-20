@@ -1,3 +1,3 @@
-# Typescript-React-Python Project
+# Typescript-React--Boilerplate
 
-A work in progress...more to come soon!
+A bolier plate to get started on typescript-react projects quicker
