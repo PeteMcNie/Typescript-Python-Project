@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 
 export interface HelloWorldProps {
   userName: string
@@ -12,9 +12,9 @@ const App = (props: HelloWorldProps) => (
     {props.userName}
     {' '}
     from React! Welcome to
-    {props.lang}
-    !
+    {props.lang}   
+    ! 
   </h1>
-);
+)
 
-export default App;
+export default App
