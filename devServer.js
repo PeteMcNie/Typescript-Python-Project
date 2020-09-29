@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 const path = require('path')
+// eslint-disable-next-line
 const express = require('express')
 
 const server = express()
