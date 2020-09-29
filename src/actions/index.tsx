@@ -40,6 +40,9 @@ export function removerPerson(person: string): RemovePerson {
     }
 }
 
+//Create union type for where an actions are opposites
+export type UpdatePerson = AddPerson | RemovePerson
+
 export function numberOfTeams(): NumberOfTeams {
     return {
         type: constants.NUMBER_OF_TEAMS
@@ -59,3 +62,5 @@ export function removeTeamName(teamName: string): RemoveTeamName {
         teamName: teamName
     }
 }
+
+export type UpdateTeamName = AddTeamName | RemoveTeamName
