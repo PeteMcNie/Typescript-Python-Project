@@ -1,20 +1,14 @@
-// import * as React from 'react'
+import * as React from 'react'
 
-// export interface HelloWorldProps {
-//   userName: string
-//   lang: string
-// }
+export interface HelloWorldProps {
+  userName: string
+  lang: string
+}
 
-// const App = (props: HelloWorldProps) => (
-//   <h1>
-//     Hi
-//     {' '}
-//     {props.userName}
-//     {' '}
-//     from React! Welcome to
-//     {props.lang}   
-//     ! 
-//   </h1>
-// )
+const App = () => (
+  <h1>
+      GOOD MORNING
+  </h1>
+)
 
-// export default App
+export default App
