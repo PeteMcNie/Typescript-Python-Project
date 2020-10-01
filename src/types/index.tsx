@@ -1,5 +1,5 @@
 export interface StoreState {
-    people: string[]
+    people: string
     noOfTeams: number
-    teamNames: string[]
+    teamNames: string
 }
