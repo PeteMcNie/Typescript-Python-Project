@@ -9,9 +9,9 @@ import { Provider } from 'react-redux'
 import App from './components/App'
 
 const store = createStore<StoreState>(people, { 
-  people: 'Pete',
+  people: [],
   noOfTeams: 2,
-  teamNames: 'Blue'
+  teamNames: ''
 })
 
 ReactDOM.render(
