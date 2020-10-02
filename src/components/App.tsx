@@ -1,4 +1,7 @@
 import * as React from 'react'
+// import * as actions from '../actions'
+import { StoreState } from '../types/index'
+import { connect } from 'react-redux'
 
 export interface Props {
   people: string
@@ -6,7 +9,7 @@ export interface Props {
   teamNames: string
 }
 
-function App ({ people, noOfTeams = 2, teamNames }: Props) {
+function App ({ people, noOfTeams, teamNames }: Props) {
     console.log('App ', people, noOfTeams, teamNames)
     return (
         <div>
@@ -22,4 +25,12 @@ function App ({ people, noOfTeams = 2, teamNames }: Props) {
     )
 }
 
-export default App
+function mapStateToProps (state: StoreState, ownProps: Props) {
+    return {
+        people: state.people,
+        noOfTeams: state.noOfTeams,
+        teamNames: state.teamNames
+    }
+}
+
+export default connect(mapStateToProps)(App)
