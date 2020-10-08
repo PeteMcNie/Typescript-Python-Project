@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import * as actions from '../actions'
 import { StoreState } from '../types/index'
-import { connect, Dispatch } from 'react-redux'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
 
 export interface Props {
   people: string[]
@@ -10,16 +11,10 @@ export interface Props {
   submitPerson(person: string | undefined): () => void
 }
 
-interface SyntheticEvent<T> {
-    currentTarget: EventTarget & T
-}
-
 function App ({ people, noOfTeams = 4, teamNames, submitPerson }: Props) {
-    // const [statePerson, setPersonState] = useState('')
     const [statePerson, setPersonState] = useState<string | undefined>(undefined)
 
     function handleChange (evt: React.ChangeEvent<HTMLInputElement>) {
-        console.log(evt.target.value)
         const { value }: { value: string } = evt.target
         setPersonState(value)
     }
@@ -57,7 +52,7 @@ function mapStateToProps (state: StoreState) {
 
 function mapDispatchToProps (dispatch: Dispatch<actions.UpdatePerson>) {
     return {
-        submitPerson: (person) => dispatch(actions.addPerson(person))
+        submitPerson: (person: string) => dispatch(actions.addPerson(person))
     }
 }
 
