@@ -10,11 +10,15 @@ export interface Props {
   submitPerson(person: string | undefined): () => void
 }
 
+interface SyntheticEvent<T> {
+    currentTarget: EventTarget & T
+}
+
 function App ({ people, noOfTeams = 4, teamNames, submitPerson }: Props) {
     // const [statePerson, setPersonState] = useState('')
     const [statePerson, setPersonState] = useState<string | undefined>(undefined)
 
-    function handleChange (evt) {
+    function handleChange (evt: React.ChangeEvent<HTMLInputElement>) {
         console.log(evt.target.value)
         const { value }: { value: string } = evt.target
         setPersonState(value)
