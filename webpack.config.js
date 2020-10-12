@@ -18,6 +18,7 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         loader: 'awesome-typescript-loader',
+        include: [ path.resolve(__dirname, 'src') ]
       },
       {
         enforce: 'pre',
